@@ -12,4 +12,12 @@ c) This algorithm is run O(n) times where n is the number of bunnies throw in as
 
 ## Exercise II
 
+You should drop all of the eggs carefully and gently from the very first floor. In this way you can assure that floor is at the smallest possible value, and the eggs have the least chance of breaking
+
+drop_egg(n):
+   if n == 0
+      drop eggs
+   else:
+      drop_eggs(n-1)
+
 
