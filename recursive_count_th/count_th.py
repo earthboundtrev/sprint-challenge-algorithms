@@ -5,11 +5,17 @@ Your function must utilize recursion. It cannot contain any loops.
 '''
 def count_th(word):
     
+    temp_word =''
+    counter=0
+    if word is None:
+        return counter
     if word == 't'
+        temp_word = word
         # increment word
-        #save the occurence of t somehow
+        
     if word == 'th'
         # implement counter
         # reset word
     else:
         # increment word
+    pass
