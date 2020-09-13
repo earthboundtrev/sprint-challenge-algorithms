@@ -4,19 +4,23 @@ Your function should take in a single parameter (a string `word`)
 Your function should return a count of how many occurences of ***"th"*** occur within `word`. Case matters.
 Your function must utilize recursion. It cannot contain any loops.
 '''
+counter=0
 def count_th(word):
 
     # ipdb.set_trace()
     # print("This the current word value:", word)
-    counter=0
+    global counter
+    print("This the is the current value of word:", word)
+    # print("This the is the current value of word[]:", word[:2])
+
 
     if word == "":
         print(counter)
         return counter
-    if word[0:1] == 'th' and len(word)>=1:
+    elif word[:2] == 'th':
         counter=counter+1
         count_th(word[2:])
     else:
         count_th(word[1:])
 
-count_th("testth")
+    return counter
