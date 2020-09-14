@@ -108,7 +108,7 @@ class SortingRobot:
                 if(can_move_right(self) == True):
                     move_right(self)
             elif(compare_item(self) == -1):
-                if(can_movce_right(self) == True):
+                if(can_move_right(self) == True):
                     move_right(self)
             else
                 return false

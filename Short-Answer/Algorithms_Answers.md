@@ -12,14 +12,16 @@ c) This algorithm is run O(n) times where n is the number of bunnies throw in as
 
 ## Exercise II
 
-You should drop all of the eggs carefully and gently staring from the first floor. In this way you can assure that floor is at the smallest possible value, and a lot of eggs will break along the way, but fewer will break this way then from staring from the top
+You should begin dropping eggs from the half way point of the stories of the buildings at n/2. If the egg doesn't break at the story height of n/2 that means that all of the values of n that are lower than n/2 can be discarded as not possible places where the will break because the heights are smaller. If the egg does break, and you want to find the first location where the egg starts breaking you can ignore the upper half of the story numbers n because if it already broke at n/2 then it will break at all values greater than n/2. This method is valuable because each possible variation of the egg breaking or not breaking n/2 will cut the sample size that you need to check in half.
 
-drop_egg(floor):
-   if egg == broken
-      return floor
+drop_egg(floor/2):
+   if egg is broken
+      drop_eggs(floor-1)
    else:
+      if floor is already visited
+        return floor-1
       drop_eggs(floor+1)
 
-   This algorithm would run with a O(N) time complexity.
+   This algorithm would run with a O(N) time complexity where n corresponds to the number of floors. Despite the algorithms sample size halfing it is stil treated as an O(N) algorithm.
 
 
