@@ -97,7 +97,23 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
-        pass
+        newRobot=SortingRobot(self, l)
+
+        for i in range len(newRobot.list):
+            if(compare_item(self) == 1):
+                swap_item(self)
+                if(can_move_right(self) == True):
+                    move_right(self)
+            elif(compare_item(self) == -1):
+                if(can_move_right(self) == True):
+                    move_right(self)
+            elif(compare_item(self) == -1):
+                if(can_move_right(self) == True):
+                    move_right(self)
+            else
+                return false
+
+
 
 
 if __name__ == "__main__":
